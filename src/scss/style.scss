@@ -18,7 +18,8 @@ body {
     .header {
         float: left;
         width: 100%;
-        border-radius: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
         padding: 15px $spacer 12px;
         background-color: $bg-white;
     }
@@ -58,11 +59,38 @@ body {
             outline: none;
         }
 
-        button:hover { opacity: 0.9; }
-        button:active { opacity: 0.8; }
+        button:hover { opacity: 0.8; }
+        button:active { opacity: 0.7; }
     }
 
     .table {
+        th, td {
+            border: 1px solid #d1d3d4;
+            padding: 8px 12px;
+            vertical-align: middle;
+        }
 
+        thead th {
+            padding: 3px 12px;
+            background: linear-gradient(#f0f1f1, #e6e7e8);
+        }
+
+        .th1 {
+            width: 10px;
+            background: linear-gradient(#1e9cd7, #005b97);
+        }
+
+        tr:nth-child(odd) { background-color: #f9f9f9; }
+        tr:nth-child(even) { background-color: $bg-white; }
+
+        // Need to use background here for specificity logic
+        /* tr:nth-child(odd) th { background: #e6e6e6; }
+        tr:nth-child(even) th { background: $bg-application; } */
+
+        .td-sex, .td-tier {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+        }
     }
 }

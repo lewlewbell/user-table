@@ -10,7 +10,8 @@ body {
   .application .header {
     float: left;
     width: 100%;
-    border-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     padding: 15px 30px 12px;
     background-color: #fff; }
   .application .logo {
@@ -37,6 +38,27 @@ body {
       font-weight: bold;
       outline: none; }
     .application .table-controls button:hover {
-      opacity: 0.9; }
-    .application .table-controls button:active {
       opacity: 0.8; }
+    .application .table-controls button:active {
+      opacity: 0.7; }
+  .application .table {
+    /* tr:nth-child(odd) th { background: #e6e6e6; }
+        tr:nth-child(even) th { background: $bg-application; } */ }
+    .application .table th, .application .table td {
+      border: 1px solid #d1d3d4;
+      padding: 8px 12px;
+      vertical-align: middle; }
+    .application .table thead th {
+      padding: 3px 12px;
+      background: linear-gradient(#f0f1f1, #e6e7e8); }
+    .application .table .th1 {
+      width: 10px;
+      background: linear-gradient(#1e9cd7, #005b97); }
+    .application .table tr:nth-child(odd) {
+      background-color: #f9f9f9; }
+    .application .table tr:nth-child(even) {
+      background-color: #fff; }
+    .application .table .td-sex, .application .table .td-tier {
+      width: 40px;
+      height: 40px;
+      padding: 0; }
