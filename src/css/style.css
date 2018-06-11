@@ -1,0 +1,23 @@
+body {
+  background: #393f49; }
+
+.application {
+  width: 100%;
+  max-width: 1155px;
+  margin: 65px auto;
+  background-color: #f2f2f2; }
+  .application .header {
+    float: left;
+    width: 100%;
+    padding: 15px 30px 12px;
+    background-color: #fff; }
+  .application .logo {
+    float: left; }
+  .application .title {
+    float: right; }
+  .application .main-content {
+    display: flex;
+    padding: 30px; }
+  .application .table-controls {
+    width: 125px;
+    padding-right: 30px; }

@@ -1,0 +1,40 @@
+$bg-page: #393f49;
+$bg-application: #f2f2f2;
+$bg-white: #fff;
+$spacer: 30px; // 30px margins and padding is common in this design
+
+body {
+    background: $bg-page;
+}
+
+.application {
+    width: 100%;
+    max-width: 1155px;
+    margin: 65px auto;
+    background-color: $bg-application;
+
+    .header {
+        float: left;
+        width: 100%;
+        padding: 15px $spacer 12px;
+        background-color: $bg-white;
+    }
+
+    // These items can be floated, as flexing might be a little overkill
+    .logo { float: left; }
+    .title { float: right; }
+
+    .main-content {
+        display: flex; // Flex the table controls and table
+        padding: $spacer;
+    }
+
+    .table-controls {
+        width: 125px;
+        padding-right: $spacer;
+    }
+
+    .table {
+
+    }
+}
