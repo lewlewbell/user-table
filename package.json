@@ -1,0 +1,24 @@
+{
+  "name": "user-table",
+  "version": "1.0.0",
+  "description": "A 4 hour assessment for VizExplorer",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewlewbell/user-table.git"
+  },
+  "author": "Lewis Barron <lewis.barron@fairfaxmedia.co.nz> (http://www.fairfaxmedia.co.nz/)",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.24.4",
+    "gulp": "3.9.1",
+    "gulp-sass": "4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/lewlewbell/user-table/issues"
+  },
+  "homepage": "https://github.com/lewlewbell/user-table#readme"
+}
