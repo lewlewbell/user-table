@@ -14,8 +14,11 @@
 <body>
     <div class="application">
         <header class="header">
-            <div class="logo">Logo</div>
-            <div class="title">Title</div>
+            <!-- SVG with JS generated PNG fallback -->
+            <a class="logo" href="https://www.vizexplorer.com/" title="VizExplorer website">
+                <img src="/assets/images/viz-logo.svg" onerror="this.onerror=null; this.src='/assets/images/viz-logo.png'" alt="Viz Explorer logo" />
+            </a>
+            <div class="title">DataGrid Assignment</div>
         </header>
 
         <main class="main-content">

@@ -1,6 +1,7 @@
 $bg-page: #393f49;
 $bg-application: #f2f2f2;
 $bg-white: #fff;
+$bg-grey: #ccc;
 $spacer: 30px; // 30px margins and padding is common in this design
 
 body {
@@ -11,18 +12,33 @@ body {
     width: 100%;
     max-width: 1155px;
     margin: 65px auto;
+    border-radius: 12px;
     background-color: $bg-application;
 
     .header {
         float: left;
         width: 100%;
+        border-radius: 12px;
         padding: 15px $spacer 12px;
         background-color: $bg-white;
     }
 
     // These items can be floated, as flexing might be a little overkill
-    .logo { float: left; }
-    .title { float: right; }
+    .logo {
+        display: block;
+        float: left;
+        max-width: 250px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .title {
+        float: right;
+        color: #bdccd4;
+    }
 
     .main-content {
         display: flex; // Flex the table controls and table
@@ -32,6 +48,18 @@ body {
     .table-controls {
         width: 125px;
         padding-right: $spacer;
+
+        button {
+            border: 2px solid $bg-grey;
+            border-radius: 7px;
+            background: linear-gradient(#fefefe, #e6e6e6);
+            color: #808080;
+            font-weight: bold;
+            outline: none;
+        }
+
+        button:hover { opacity: 0.9; }
+        button:active { opacity: 0.8; }
     }
 
     .table {

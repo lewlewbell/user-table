@@ -5,19 +5,38 @@ body {
   width: 100%;
   max-width: 1155px;
   margin: 65px auto;
+  border-radius: 12px;
   background-color: #f2f2f2; }
   .application .header {
     float: left;
     width: 100%;
+    border-radius: 12px;
     padding: 15px 30px 12px;
     background-color: #fff; }
   .application .logo {
-    float: left; }
+    display: block;
+    float: left;
+    max-width: 250px; }
+    .application .logo img {
+      width: 100%;
+      height: auto; }
   .application .title {
-    float: right; }
+    float: right;
+    color: #bdccd4; }
   .application .main-content {
     display: flex;
     padding: 30px; }
   .application .table-controls {
     width: 125px;
     padding-right: 30px; }
+    .application .table-controls button {
+      border: 2px solid #ccc;
+      border-radius: 7px;
+      background: linear-gradient(#fefefe, #e6e6e6);
+      color: #808080;
+      font-weight: bold;
+      outline: none; }
+    .application .table-controls button:hover {
+      opacity: 0.9; }
+    .application .table-controls button:active {
+      opacity: 0.8; }
