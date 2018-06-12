@@ -133,7 +133,9 @@ a { color: $text-standard-colour; }
             left: -9999px;
         }
 
-        tr { border: 1px solid #ccc; }
+        tr { border: 1px solid #117fbb; }
+
+        .td-sex, .td-tier { margin-left: 12px; }
 
         td {
             /* Behave  like a "row" */

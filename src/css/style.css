@@ -88,7 +88,9 @@ a {
         top: -9999px;
         left: -9999px; }
       .application tr {
-        border: 1px solid #ccc; }
+        border: 1px solid #117fbb; }
+      .application .td-sex, .application .td-tier {
+        margin-left: 12px; }
       .application td {
         /* Behave  like a "row" */
         border: none;
