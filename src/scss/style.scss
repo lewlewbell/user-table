@@ -2,11 +2,15 @@ $bg-page: #393f49;
 $bg-application: #f2f2f2;
 $bg-white: #fff;
 $bg-grey: #ccc;
+$text-standard-colour: #58595b;
 $spacer: 30px; // 30px margins and padding is common in this design
 
 body {
     background: $bg-page;
+    color: $text-standard-colour;
 }
+
+a { color: $text-standard-colour; }
 
 .application {
     width: 100%;
@@ -38,7 +42,9 @@ body {
 
     .title {
         float: right;
+        padding-top: 7px;
         color: #bdccd4;
+        font-size: 20px;
     }
 
     .main-content {
@@ -47,15 +53,13 @@ body {
     }
 
     .table-controls {
-        width: 125px;
-        padding-right: $spacer;
-
         button {
+            width: 125px;
+            margin-right: $spacer;
             border: 2px solid $bg-grey;
             border-radius: 7px;
             background: linear-gradient(#fefefe, #e6e6e6);
             color: #808080;
-            font-weight: bold;
             outline: none;
         }
 

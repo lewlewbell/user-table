@@ -1,5 +1,9 @@
 body {
-  background: #393f49; }
+  background: #393f49;
+  color: #58595b; }
+
+a {
+  color: #58595b; }
 
 .application {
   width: 100%;
@@ -23,24 +27,24 @@ body {
       height: auto; }
   .application .title {
     float: right;
-    color: #bdccd4; }
+    padding-top: 7px;
+    color: #bdccd4;
+    font-size: 20px; }
   .application .main-content {
     display: flex;
     padding: 30px; }
-  .application .table-controls {
+  .application .table-controls button {
     width: 125px;
-    padding-right: 30px; }
-    .application .table-controls button {
-      border: 2px solid #ccc;
-      border-radius: 7px;
-      background: linear-gradient(#fefefe, #e6e6e6);
-      color: #808080;
-      font-weight: bold;
-      outline: none; }
-    .application .table-controls button:hover {
-      opacity: 0.8; }
-    .application .table-controls button:active {
-      opacity: 0.7; }
+    margin-right: 30px;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    background: linear-gradient(#fefefe, #e6e6e6);
+    color: #808080;
+    outline: none; }
+  .application .table-controls button:hover {
+    opacity: 0.8; }
+  .application .table-controls button:active {
+    opacity: 0.7; }
   .application .table {
     /* tr:nth-child(odd) th { background: #e6e6e6; }
         tr:nth-child(even) th { background: $bg-application; } */ }
