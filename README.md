@@ -6,6 +6,12 @@
 2. Run 'gulp sass', this will build all project SASS into minified production-ready CSS
 3. Run 'gulp', this will start up a local server -- address will be noted in the terminal results. This will also watch for any code changes and update on-the-fly.
 
+## Testing
+
+Tested on Chrome, Samsung Galaxy S8 and iPhone 8.
+
+With time I would test more comprehensively across devices, and desktop browsers.
+
 ## Future updates
 
 Although this has been academic, in a real life scenario there would be a number of improvements I would make to this project given time:
