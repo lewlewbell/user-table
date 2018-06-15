@@ -51,6 +51,8 @@ a { color: $text-standard-colour; }
     }
 
     .main-content {
+        position: relative;
+
         @media only screen and (min-width: $mobile-break-point) {
             display: flex; // Flex the table controls and table
             padding: $spacer;

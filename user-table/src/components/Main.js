@@ -13,7 +13,7 @@ class AppComponent extends React.Component {
     }
   }
 
-  showAddUserDialog = function() {
+  showAddUserDialog = () => {
     this.setState({ showDialog: true })
   }
 

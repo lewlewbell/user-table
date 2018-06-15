@@ -12,7 +12,7 @@ const userData = [];
 
 for (var count = 1; count <= userTotal; count++) {
   userData.push(
-    <tr>
+    <tr key={Object.keys(users)[count]}>
       <th scope="row">{count}</th>
       <td>{users[count].firstName}</td>
       <td>{users[count].surname}</td>
