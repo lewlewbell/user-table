@@ -3,8 +3,8 @@
 ## Configuration
 
 1. Run 'npm install', this will automatically install all node modules required for this project
-2. Run 'gulp sass', this will build all project SASS into minified production-ready CSS
-3. Run 'gulp', this will start up a local server -- address will be noted in the terminal results. This will also watch for any code changes and update on-the-fly.
+2. cd 'user-table' and run 'npm start'
+3. Go to http://localhost:8000/ to use application
 
 ## Testing
 
