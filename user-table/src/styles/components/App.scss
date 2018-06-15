@@ -1,0 +1,165 @@
+$bg-page: #493942;
+$bg-application: #f2f2f2;
+$bg-white: #fff;
+$bg-grey: #ccc;
+$text-standard-colour: #58595b;
+$spacer: 30px; // 30px margins and padding is common in this design
+$mobile-break-point: 768px;
+
+body {
+    background: $bg-page;
+    color: $text-standard-colour;
+}
+
+a { color: $text-standard-colour; }
+
+.show-dialog { display: block; }
+.hide-dialog { display: none; }
+
+.application {
+    width: 100%;
+    max-width: 1155px;
+    margin: 65px auto;
+    border-radius: 12px;
+    background-color: $bg-application;
+
+    .header {
+        float: left;
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding: 15px $spacer 12px;
+        background-color: $bg-white;
+    }
+
+    // These items can be floated, as flexing might be a little overkill
+    .logo {
+        display: block;
+        float: left;
+
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    .title {
+        float: right;
+        padding-top: 7px;
+        color: #bdccd4;
+        font-size: 20px;
+    }
+
+    .main-content {
+        @media only screen and (min-width: $mobile-break-point) {
+            display: flex; // Flex the table controls and table
+            padding: $spacer;
+        }
+    }
+
+    .tablecontrols-component {
+        border: 1px dashed #f00;
+    }
+
+    .table-controls {
+        padding: 20px;
+
+        button {
+            width: 125px;
+            margin: 20px auto;
+            border: 2px solid $bg-grey;
+            border-radius: 7px;
+            background: linear-gradient(#fefefe, #e6e6e6);
+            color: #808080;
+            outline: none;
+        }
+
+        button:hover { opacity: 0.8; }
+        button:active { opacity: 0.7; }
+
+        @media only screen and (min-width: $mobile-break-point) {
+            padding: 0;
+
+            button {
+                margin: 0 $spacer 0 0;
+            }
+        }
+    }
+
+    .table {
+        max-width: 938px;
+
+        th, td {
+            border: 1px solid #d1d3d4;
+            padding: 8px 12px;
+            vertical-align: middle;
+        }
+
+        thead th {
+            padding: 3px 12px;
+            background: linear-gradient(#f0f1f1, #e6e7e8);
+        }
+
+        .th1 {
+            width: 10px;
+            background: linear-gradient(#1e9cd7, #005b97);
+        }
+
+        tr:nth-child(odd) { background-color: #f9f9f9; }
+        tr:nth-child(even) { background-color: $bg-white; }
+
+        // Need to use background here for specificity logic
+        /* tr:nth-child(odd) th { background: #e6e6e6; }
+        tr:nth-child(even) th { background: $bg-application; } */
+
+        .td-sex, .td-tier {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+        }
+    }
+
+    // Responsive tables!
+    // This is an idea adopted from my 'responsive cures' repo, located at https://github.com/lewlewbell/responsive-cures
+    // There is nothing worse than a big long table squished onto a phone screen, often it is not even readable. What my code will do below is completely reformat the structure of a table on devices below 767px -- give it a try!
+    // I'm doing this slightly wrong here as I should be going mobile first not mobile last -- with time I would have refactored this.
+
+    @media only screen and (max-width: 767px) {
+        table { padding: 0 20px; }
+
+        /* Force table to not be like tables anymore :-p */
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr { border: 1px solid #117fbb; }
+
+        .td-sex, .td-tier { margin-left: 12px; }
+
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values will now mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+    }
+}
