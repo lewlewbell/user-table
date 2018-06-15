@@ -7,11 +7,12 @@ require('styles/components/Table.scss');
 // Import table data
 const users = require('json-loader!../../data/users.json');
 
-const userTotal = Object.keys(users).length;
-const userData = [];
+const userTotal = Object.keys(users).length; // Get number of users in json
+const userData = []; // Create an empty array for later
 
-for (var count = 1; count <= userTotal; count++) {
+for (var count = 1; count <= userTotal; count++) { // Loop based on number of users in feed
   userData.push(
+    // We iterate over the table row, feeding appropriate data from users.json
     <tr key={Object.keys(users)[count]}>
       <th scope="row">{count}</th>
       <td>{users[count].firstName}</td>
